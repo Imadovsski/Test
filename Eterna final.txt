@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eterna — Vječnost ima svoj miris</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital@0;1&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg1:#040b18;
+  --bg2:#0b1c35;
+  --gold:#c9a86b;
+  --blue:#9cc3ff;
+  --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Raleway",sans-serif;
+  background:linear-gradient(180deg,var(--bg2),var(--bg1));
+  color:var(--white);
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+header{
+  position:fixed;top:0;width:100%;
+  background:rgba(0,0,0,0.2);
+  backdrop-filter:blur(8px);
+  padding:12px 0;
+  text-align:center;
+  z-index:1000;
+}
+header a{
+  color:var(--white);
+  margin:0 20px;
+  text-decoration:none;
+  font-weight:600;
+}
+header a:hover{color:var(--gold);}
+.hero{
+  height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(circle at center,var(--bg2) 0%,var(--bg1) 100%);
+}
+.hero img{
+  width:260px;filter:drop-shadow(0 0 25px rgba(201,168,107,0.6));
+}
+.hero h1{
+  font-family:"Cinzel",serif;
+  font-size:60px;color:var(--gold);margin-top:25px;
+}
+.hero p{
+  font-family:"Playfair Display",serif;
+  font-size:22px;color:var(--blue);
+  margin-top:10px;
+}
+.scroll{margin-top:40px;color:var(--white);opacity:.6;animation:blink 2s infinite alternate}
+@keyframes blink{from{opacity:.6}to{opacity:1}}
+section{max-width:1100px;margin:120px auto;padding:0 20px;opacity:0;transform:translateY(40px);transition:all 1s ease;}
+section.visible{opacity:1;transform:translateY(0);}
+h2{font-family:"Cinzel",serif;color:var(--gold);text-align:center;font-size:36px;margin-bottom:10px;}
+p.lead{text-align:center;color:var(--blue);font-size:18px;line-height:1.7;}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;margin-top:40px;
+}
+.product{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;
+  padding:20px;text-align:center;
+  transition:.3s;
+}
+.product:hover{
+  transform:translateY(-8px);
+  box-shadow:0 8px 25px rgba(201,168,107,0.3);
+}
+.product h3{font-family:"Cinzel";color:var(--gold);margin-bottom:8px;}
+.philosophy,.reviews{background:rgba(255,255,255,0.02);padding:60px 20px;border-radius:12px;margin-top:80px;}
+.review{
+  background:rgba(255,255,255,0.05);
+  border-left:4px solid var(--gold);
+  margin:20px auto;padding:20px;border-radius:8px;
+  max-width:700px;
+}
+.review p{font-style:italic;color:var(--blue);}
+.contact{
+  background:linear-gradient(180deg,var(--bg2),var(--bg1));
+  padding:80px 20px;border-top:1px solid rgba(255,255,255,0.1);
+}
+form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:15px;}
+input,textarea{
+  padding:12px;border-radius:8px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(0,0,0,0.2);
+  color:var(--white);
+}
+button{
+  background:var(--gold);color:#000;border:none;padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
+  transition:.3s;
+}
+button:hover{background:var(--blue);}
+footer{
+  text-align:center;padding:40px;background:var(--bg2);
+  color:var(--blue);font-size:14px;
+}
+</style>
+</head>
+<body>
+<header>
+  <a href="#about">O nama</a>
+  <a href="#products">Proizvodi</a>
+  <a href="#philosophy">Filozofija</a>
+  <a href="#reviews">Recenzije</a>
+  <a href="#contact">Kontakt</a>
+</header>
+
+<section class="hero">
+  <img src="Logo Bez pozadine.png" alt="Eterna Logo">
+  <h1>ETERNA</h1>
+  <p>Vječnost ima svoj miris</p>
+  <div class="scroll">▼ Scroll down ▼</div>
+</section>
+
+<section id="about">
+  <h2>O preduzeću</h2>
+  <p class="lead">
+    <strong>Eterna</strong> je preduzeće za vježbu koje spaja svijet parfema, njege i elegancije.
+    Naš cilj je da svaki miris prenese osjećaj luksuza, samopouzdanja i trajnosti.
+    Inspiraciju crpimo iz umjetnosti, prirode i savremenog dizajna.
+  </p>
+</section>
+
+<section id="products">
+  <h2>Naši proizvodi</h2>
+  <div class="products">
+    <div class="product"><h3>ETERNA No.01</h3><p>Bergamot, ruža, amber — klasika koja traje.</p></div>
+    <div class="product"><h3>VELVET</h3><p>Pear & sandalwood — mekoća luksuza.</p></div>
+    <div class="product"><h3>BLOOM</h3><p>Cvjetni akordi s notom magnolije i cedra.</p></div>
+    <div class="product"><h3>NOIR</h3><p>Tamni tonovi oud-a i pačulija za sofisticirane.</p></div>
+    <div class="product"><h3>LUMINA</h3><p>Svježina citrusa s daškom bijelog mošusa.</p></div>
+  </div>
+</section>
+
+<section id="philosophy" class="philosophy">
+  <h2>Naša filozofija</h2>
+  <p class="lead">
+    Eterna vjeruje da miris nije samo dodatak — on je produžetak identiteta.
+    Naši parfemi su pažljivo birani spojevi nota koje bude emocije i ostavljaju trag vječnosti.
+  </p>
+</section>
+
+<section id="reviews" class="reviews">
+  <h2>Recenzije</h2>
+  <div class="review">
+    <p>“Elegantno, suptilno i trajno — Eterna me osvojila svojim pristupom luksuzu.”</p>
+    <span>— Klijent 1</span>
+  </div>
+  <div class="review">
+    <p>“Miris koji ostaje cijeli dan i podsjeća na nešto posebno. Preporučujem svima.”</p>
+    <span>— Klijent 2</span>
+  </div>
+  <div class="review">
+    <p>“Dizajn, miris i doživljaj — sve kod Eterne odiše klasom.”</p>
+    <span>— Klijent 3</span>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Kontaktirajte nas</h2>
+  <form onsubmit="event.preventDefault();alert('Hvala! Vaša poruka je primljena.');">
+    <input type="text" placeholder="Ime i prezime" required>
+    <input type="email" placeholder="Email adresa" required>
+    <textarea rows="4" placeholder="Poruka..." required></textarea>
+    <button type="submit">Pošalji poruku</button>
+  </form>
+</section>
+
+<footer>© 2025 ETERNA — Sva prava zadržana</footer>
+
+<script>
+// fade/slide scroll animacije
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add('visible');
+ });
+},{threshold:0.1});
+document.querySelectorAll('section').forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>
